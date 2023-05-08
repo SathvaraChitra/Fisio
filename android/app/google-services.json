@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1017429675606",
+    "project_id": "social-login-demo-96eaa",
+    "storage_bucket": "social-login-demo-96eaa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017429675606:android:a40aa752829ace0f1335f7",
+        "android_client_info": {
+          "package_name": "com.example.fb_signin_demo_getx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017429675606-cdn98dgvfpdjanl08hduh364ggaoolpf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdkpo7HvwyVMO4MMXm8OQbneXvlXaASzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017429675606-cdn98dgvfpdjanl08hduh364ggaoolpf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
