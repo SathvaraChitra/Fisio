@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 application
-INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:7:5-58:19
+INJECTED from D:\Fisio\android\app\src\main\AndroidManifest.xml:7:5-58:19
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-3\f257b49f251e37666b05c9483dacd43f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-3\f257b49f251e37666b05c9483dacd43f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
 MERGED from [com.google.firebase:firebase-analytics:21.2.2] C:\Users\user\.gradle\caches\transforms-3\4179397b7bf5cd18baee41fdd489b75e\transformed\jetified-firebase-analytics-21.2.2\AndroidManifest.xml:7:5-20
@@ -58,15 +58,15 @@ MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\user\.gra
 	android:supportsRtl
 		ADDED from [com.facebook.android:facebook-android-sdk:8.2.0] C:\Users\user\.gradle\caches\transforms-3\1b2a48921a63ab0fd6663c370fb43498\transformed\jetified-facebook-android-sdk-8.2.0\AndroidManifest.xml:28:18-44
 	android:name
-		INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Fisio\android\app\src\main\AndroidManifest.xml
 manifest
-ADDED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:1:1-59:12
-INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:1:1-59:12
-INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:1:1-59:12
-INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:1:1-59:12
-MERGED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:1:1-59:12
-MERGED from [:flutter_secure_storage] C:\Users\user\StudioProjects\fb_signin_demo_getx\build\flutter_secure_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-10:12
-MERGED from [:flutter_facebook_auth] C:\Users\user\StudioProjects\fb_signin_demo_getx\build\flutter_facebook_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+ADDED from D:\Fisio\android\app\src\main\AndroidManifest.xml:1:1-59:12
+INJECTED from D:\Fisio\android\app\src\main\AndroidManifest.xml:1:1-59:12
+INJECTED from D:\Fisio\android\app\src\main\AndroidManifest.xml:1:1-59:12
+INJECTED from D:\Fisio\android\app\src\main\AndroidManifest.xml:1:1-59:12
+MERGED from D:\Fisio\android\app\src\main\AndroidManifest.xml:1:1-59:12
+MERGED from [:flutter_secure_storage] D:\Fisio\build\flutter_secure_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-10:12
+MERGED from [:flutter_facebook_auth] D:\Fisio\build\flutter_facebook_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-3\45657cc38e0c9dbd2624c4d375a30d3f\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-3\f257b49f251e37666b05c9483dacd43f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
 MERGED from [com.google.firebase:firebase-analytics:21.2.2] C:\Users\user\.gradle\caches\transforms-3\4179397b7bf5cd18baee41fdd489b75e\transformed\jetified-firebase-analytics-21.2.2\AndroidManifest.xml:2:1-9:12
@@ -133,31 +133,31 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.0] C:\Users\user\.gr
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\user\.gradle\caches\transforms-3\2845889eb8cd3dc7695a0cb1278af712\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\user\.gradle\caches\transforms-3\8cadffaf4390676c377377837d160133\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\user\.gradle\caches\transforms-3\1390f86284fabb215a9271419bf3dd1d\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\debug\AndroidManifest.xml:1:1-7:12
-INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\debug\AndroidManifest.xml:1:1-7:12
-INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\Fisio\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\Fisio\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\Fisio\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 	package
-		ADDED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:2:5-46
-		INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:2:5-46
-		INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\debug\AndroidManifest.xml
+		ADDED from D:\Fisio\android\app\src\main\AndroidManifest.xml:2:5-46
+		INJECTED from D:\Fisio\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\Fisio\android\app\src\main\AndroidManifest.xml:2:5-46
+		INJECTED from D:\Fisio\android\app\src\debug\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:1:1-59:12
-		INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\debug\AndroidManifest.xml
+		INJECTED from D:\Fisio\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\Fisio\android\app\src\main\AndroidManifest.xml:1:1-59:12
+		INJECTED from D:\Fisio\android\app\src\debug\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:3:5-51
-		ADDED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from D:\Fisio\android\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from D:\Fisio\android\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:1:1-59:12
-		INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\debug\AndroidManifest.xml
+		INJECTED from D:\Fisio\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\Fisio\android\app\src\main\AndroidManifest.xml:1:1-59:12
+		INJECTED from D:\Fisio\android\app\src\debug\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from D:\Fisio\android\app\src\main\AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:4:5-66
-MERGED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:4:5-66
-MERGED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:4:5-66
+ADDED from D:\Fisio\android\app\src\main\AndroidManifest.xml:4:5-66
+MERGED from D:\Fisio\android\app\src\main\AndroidManifest.xml:4:5-66
+MERGED from D:\Fisio\android\app\src\main\AndroidManifest.xml:4:5-66
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.2] C:\Users\user\.gradle\caches\transforms-3\96548f26ef331ccecd7500fd3b0226f0\transformed\jetified-play-services-measurement-api-21.2.2\AndroidManifest.xml:22:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.2] C:\Users\user\.gradle\caches\transforms-3\96548f26ef331ccecd7500fd3b0226f0\transformed\jetified-play-services-measurement-api-21.2.2\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-installations:17.1.3] C:\Users\user\.gradle\caches\transforms-3\cf989766414844c46c212974f8625312\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:10:5-67
@@ -169,26 +169,26 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] C:\Us
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.2] C:\Users\user\.gradle\caches\transforms-3\9b52a76ad32185b56d9b131606ed2532\transformed\jetified-play-services-measurement-sdk-api-21.2.2\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.2] C:\Users\user\.gradle\caches\transforms-3\9b52a76ad32185b56d9b131606ed2532\transformed\jetified-play-services-measurement-sdk-api-21.2.2\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:4:22-64
+		ADDED from D:\Fisio\android\app\src\main\AndroidManifest.xml:4:22-64
 uses-permission#com.google.android.gms.permission.AD_ID
-ADDED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:5:5-98
+ADDED from D:\Fisio\android\app\src\main\AndroidManifest.xml:5:5-98
 REJECTED from [com.google.android.gms:play-services-measurement-api:21.2.2] C:\Users\user\.gradle\caches\transforms-3\96548f26ef331ccecd7500fd3b0226f0\transformed\jetified-play-services-measurement-api-21.2.2\AndroidManifest.xml:25:5-79
 REJECTED from [com.facebook.android:facebook-core:16.0.1] C:\Users\user\.gradle\caches\transforms-3\341dfce8f321cafdf474ac51c3697bb6\transformed\jetified-facebook-core-16.0.1\AndroidManifest.xml:16:5-79
 REJECTED from [com.google.android.gms:play-services-measurement-impl:21.2.2] C:\Users\user\.gradle\caches\transforms-3\c51ff3efbe461a20f82667fee143b639\transformed\jetified-play-services-measurement-impl-21.2.2\AndroidManifest.xml:27:5-79
 REJECTED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\user\.gradle\caches\transforms-3\6ca91e7fdd28c7622b4a215f9dac4532\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:5-79
 REJECTED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.2] C:\Users\user\.gradle\caches\transforms-3\9b52a76ad32185b56d9b131606ed2532\transformed\jetified-play-services-measurement-sdk-api-21.2.2\AndroidManifest.xml:26:5-79
 	tools:node
-		ADDED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:5:77-96
+		ADDED from D:\Fisio\android\app\src\main\AndroidManifest.xml:5:77-96
 	android:name
-		ADDED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml:5:22-76
+		ADDED from D:\Fisio\android\app\src\main\AndroidManifest.xml:5:22-76
 uses-sdk
-INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml
-MERGED from [:flutter_secure_storage] C:\Users\user\StudioProjects\fb_signin_demo_getx\build\flutter_secure_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:53
-MERGED from [:flutter_secure_storage] C:\Users\user\StudioProjects\fb_signin_demo_getx\build\flutter_secure_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:53
-MERGED from [:flutter_facebook_auth] C:\Users\user\StudioProjects\fb_signin_demo_getx\build\flutter_facebook_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:flutter_facebook_auth] C:\Users\user\StudioProjects\fb_signin_demo_getx\build\flutter_facebook_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+INJECTED from D:\Fisio\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Fisio\android\app\src\main\AndroidManifest.xml
+INJECTED from D:\Fisio\android\app\src\main\AndroidManifest.xml
+MERGED from [:flutter_secure_storage] D:\Fisio\build\flutter_secure_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:53
+MERGED from [:flutter_secure_storage] D:\Fisio\build\flutter_secure_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:53
+MERGED from [:flutter_facebook_auth] D:\Fisio\build\flutter_facebook_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_facebook_auth] D:\Fisio\build\flutter_facebook_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-3\45657cc38e0c9dbd2624c4d375a30d3f\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-3\45657cc38e0c9dbd2624c4d375a30d3f\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-3\f257b49f251e37666b05c9483dacd43f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
@@ -321,16 +321,16 @@ MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\user\.g
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\user\.gradle\caches\transforms-3\8cadffaf4390676c377377837d160133\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\user\.gradle\caches\transforms-3\1390f86284fabb215a9271419bf3dd1d\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\user\.gradle\caches\transforms-3\1390f86284fabb215a9271419bf3dd1d\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
-INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\debug\AndroidManifest.xml
-INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\debug\AndroidManifest.xml
+INJECTED from D:\Fisio\android\app\src\debug\AndroidManifest.xml
+INJECTED from D:\Fisio\android\app\src\debug\AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [:flutter_secure_storage] C:\Users\user\StudioProjects\fb_signin_demo_getx\build\flutter_secure_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-50
+		ADDED from [:flutter_secure_storage] D:\Fisio\build\flutter_secure_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-50
 	android:targetSdkVersion
-		INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\debug\AndroidManifest.xml
+		INJECTED from D:\Fisio\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Fisio\android\app\src\debug\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\user\StudioProjects\fb_signin_demo_getx\android\app\src\debug\AndroidManifest.xml
+		INJECTED from D:\Fisio\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Fisio\android\app\src\debug\AndroidManifest.xml
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-3\f257b49f251e37666b05c9483dacd43f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
 	android:required

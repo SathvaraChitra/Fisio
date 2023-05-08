@@ -42,23 +42,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\user\\StudioProjects\\fb_signin_demo_getx\\android\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "6,3,5,4",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "276,59,192,120",
-                        "endColumns": "54,59,82,70",
-                        "endOffsets": "326,114,270,186"
-                    },
-                    "to": {
-                        "startLines": "352,378,379,380",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "23003,25662,25722,25805",
-                        "endColumns": "54,59,82,70",
-                        "endOffsets": "23053,25717,25800,25871"
-                    }
-                },
-                {
                     "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\f257b49f251e37666b05c9483dacd43f\\transformed\\jetified-window-1.0.0-beta04\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,7,8,9,10,11,19,23,34,51",
@@ -94,6 +77,23 @@
                         "endLines": "290,296,318,2911,2915",
                         "endColumns": "56,64,63,24,24",
                         "endOffsets": "19338,19603,20751,166870,167019"
+                    }
+                },
+                {
+                    "source": "D:\\Fisio\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,200,283,387,497,617,724",
+                        "endColumns": "144,82,103,109,119,106,83",
+                        "endOffsets": "195,278,382,492,612,719,803"
+                    },
+                    "to": {
+                        "startLines": "377,381,382,383,384,385,387",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "25517,25876,25959,26063,26173,26293,26460",
+                        "endColumns": "144,82,103,109,119,106,83",
+                        "endOffsets": "25657,25954,26058,26168,26288,26395,26539"
                     }
                 },
                 {
@@ -135,20 +135,22 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\user\\StudioProjects\\fb_signin_demo_getx\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "source": "D:\\Fisio\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,200,283,387,497,617,724",
-                        "endColumns": "144,82,103,109,119,106,83",
-                        "endOffsets": "195,278,382,492,612,719,803"
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "176,832",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "483,998"
                     },
                     "to": {
-                        "startLines": "377,381,382,383,384,385,387",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "25517,25876,25959,26063,26173,26293,26460",
-                        "endColumns": "144,82,103,109,119,106,83",
-                        "endOffsets": "25657,25954,26058,26168,26288,26395,26539"
+                        "startLines": "1477,1539",
+                        "startColumns": "4,4",
+                        "startOffsets": "95558,98242",
+                        "endLines": "1480,1541",
+                        "endColumns": "12,12",
+                        "endOffsets": "95734,98406"
                     }
                 },
                 {
@@ -168,6 +170,23 @@
                         "endLines": "52,53,58,2017,2020",
                         "endColumns": "102,83,61,12,12",
                         "endOffsets": "3488,3572,3917,134503,134670"
+                    }
+                },
+                {
+                    "source": "D:\\Fisio\\android\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "6,3,5,4",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "276,59,192,120",
+                        "endColumns": "54,59,82,70",
+                        "endOffsets": "326,114,270,186"
+                    },
+                    "to": {
+                        "startLines": "352,378,379,380",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "23003,25662,25722,25805",
+                        "endColumns": "54,59,82,70",
+                        "endOffsets": "23053,25717,25800,25871"
                     }
                 },
                 {
@@ -327,25 +346,6 @@
                         "startOffsets": "20545",
                         "endColumns": "42",
                         "endOffsets": "20583"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\user\\StudioProjects\\fb_signin_demo_getx\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "176,832",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "483,998"
-                    },
-                    "to": {
-                        "startLines": "1477,1539",
-                        "startColumns": "4,4",
-                        "startOffsets": "95558,98242",
-                        "endLines": "1480,1541",
-                        "endColumns": "12,12",
-                        "endOffsets": "95734,98406"
                     }
                 },
                 {

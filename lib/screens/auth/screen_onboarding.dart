@@ -1,89 +1,41 @@
+import 'package:fb_signin_demo_getx/get/controllers.dart';
+import 'package:fb_signin_demo_getx/resource/app_lists.dart';
+import 'package:fb_signin_demo_getx/widgets/onboard_content.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class ScreenOnBoarding extends StatelessWidget {
+class ScreenOnBoarding extends GetView<ControllerOnBoarding> {
   static String pageId = '/screenOnBoarding';
+  final controllerr = Get.put(ControllerOnBoarding());
 
-  const ScreenOnBoarding({Key? key}) : super(key: key);
+  ScreenOnBoarding({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: PageView.builder(
-                itemBuilder: (BuildContext context, int index) =>
-                 OnBoardContent(size: size,
-                  image: 'assets/images/welcome.png',
-                  title: '1. Set up your Firebase project ',
-                  description: '1. Set up your Firebase project · Security: '
-                      'Shorter TTLs provide stronger security, because',),
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-
-              style: ButtonStyle(
-                  fixedSize: MaterialStatePropertyAll(Size(size.width * 0.5,size.height * 0.06)),
-                  shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  )),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text('Start',
-                    style: TextStyle(fontSize: 20) ,),
-                  Icon(Icons.navigate_next),
-                ],
-              ),
-            ),
-            SizedBox(height: size.height * 0.2,)
-          ],
-        ),
-      ),
+    var size = MediaQuery
+        .of(context)
+        .size;
+    return PageView.builder(
+      controller: controllerr.pageController,
+      onPageChanged: (value) {
+        controllerr.pageIndex.value = value;
+        print('page ${controllerr.pageIndex.value}');
+      },
+      itemCount: AppLists.dummy_data.length,
+      itemBuilder: (BuildContext context, int index) =>
+          Obx(() {
+            return OnBoardContent(
+              size: size,
+              image: AppLists.dummy_data[index].image,
+              title: AppLists.dummy_data[index].title,
+              description: AppLists.dummy_data[index].description,
+              background: AppLists.dummy_data[index].background,
+              controller: controllerr,
+              isActive: (index == controllerr.pageIndex.value),
+              isLast : (index == AppLists.dummy_data.length - 1),
+            );
+          }),
     );
   }
 }
 
-class OnBoardContent extends StatelessWidget {
-  const OnBoardContent({
-    Key? key,
-    required this.size, required this.image, required this.title, required this.description,
-  }) : super(key: key);
-
-  final Size size;
-  final String image, title, description;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        SizedBox(
-          height: size.height * 0.05,
-        ),
-        Container(
-            width: size.width * 0.3,
-            height: size.height * 0.2,
-            child: Image.asset( image,)),
-        SizedBox(
-          height: size.height * 0.3,
-        ),
-         Text(title,
-          textAlign: TextAlign.center,
-          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        Text(description,
-            style: const TextStyle(
-              fontSize: 16,
-            ),
-            textAlign: TextAlign.center),
-      ],
-    );
-  }
-}

@@ -12,7 +12,7 @@ class ScreenSplash extends GetView<ControllerSplash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red.withBlue(200),
+      backgroundColor: Colors.orange.shade200,
       body: const Center(
         child: Text(
           'Welcome',
