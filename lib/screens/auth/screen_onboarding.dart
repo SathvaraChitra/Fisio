@@ -1,4 +1,5 @@
 import 'package:fb_signin_demo_getx/get/controllers.dart';
+import 'package:fb_signin_demo_getx/resource/app_helper.dart';
 import 'package:fb_signin_demo_getx/resource/app_lists.dart';
 import 'package:fb_signin_demo_getx/widgets/onboard_content.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class ScreenOnBoarding extends GetView<ControllerOnBoarding> {
       controller: controllerr.pageController,
       onPageChanged: (value) {
         controllerr.pageIndex.value = value;
-        print('page ${controllerr.pageIndex.value}');
+        AppHelper.showLog('page ${controllerr.pageIndex.value}');
       },
       itemCount: AppLists.dummy_data.length,
       itemBuilder: (BuildContext context, int index) =>

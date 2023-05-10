@@ -13,6 +13,7 @@ class ScreenDashboard extends GetView<ControllerDashboard> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Dashboard'),
+        automaticallyImplyLeading: false,
       ),
     );
   }

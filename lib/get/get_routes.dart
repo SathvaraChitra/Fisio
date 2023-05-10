@@ -9,6 +9,10 @@ class AppPages {
         page: () => ScreenSplash(),
         binding: BindingSplash()),
     GetPage(
+      name: ScreenWelcome.pageId,
+      page:() => const ScreenWelcome(),
+      binding: BindingWelcome()),
+    GetPage(
         name: ScreenOnBoarding.pageId,
         page: () => ScreenOnBoarding(),
         binding: BindingOnBoarding()),

@@ -1,5 +1,9 @@
 import 'package:fb_signin_demo_getx/get/controllers.dart';
 import 'package:fb_signin_demo_getx/get/screens.dart';
+import 'package:fb_signin_demo_getx/helper/dailog_confirm_email.dart';
+import 'package:fb_signin_demo_getx/helper/dialog_success_signup.dart';
+import 'package:fb_signin_demo_getx/resource/app_helper.dart';
+import 'package:fb_signin_demo_getx/widgets/row_social_signin.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,7 +15,9 @@ class ScreenSignUp extends GetView<ControllerSignUp> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    var size = MediaQuery
+        .of(context)
+        .size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -27,18 +33,27 @@ class ScreenSignUp extends GetView<ControllerSignUp> {
               SizedBox(
                 height: size.height * 0.05,
               ),
-              Align(
-                alignment: Alignment.topRight,
-                child: InkWell(
-                  onTap: () {
-                    Get.toNamed(ScreenLogin.pageId);
-                  },
-                  child: const Text(
-                    'Sign In',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.black54),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                      onTap: () {
+                        Get.toNamed(ScreenLogin.pageId);
+                      },
+                      child: const Icon(
+                        Icons.arrow_back_ios_new, color: Colors.black54,
+                        size: 18,)),
+                  InkWell(
+                    onTap: () {
+                      Get.toNamed(ScreenLogin.pageId);
+                    },
+                    child: const Text(
+                      'Sign In',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.black54),
+                    ),
                   ),
-                ),
+                ],
               ),
               SizedBox(
                   width: size.width * 0.3,
@@ -74,6 +89,8 @@ class ScreenSignUp extends GetView<ControllerSignUp> {
                   color: Colors.white,
                 ),
                 child: TextFormField(
+                  controller: controllerr.tcFullName,
+                  textInputAction: TextInputAction.next,
                   decoration: const InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Full Name',
@@ -91,6 +108,9 @@ class ScreenSignUp extends GetView<ControllerSignUp> {
                   color: Colors.white,
                 ),
                 child: TextFormField(
+                  controller: controllerr.tcEmail,
+                  keyboardType : TextInputType.emailAddress,
+                  textInputAction: TextInputAction.next,
                   decoration: const InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Email',
@@ -107,12 +127,22 @@ class ScreenSignUp extends GetView<ControllerSignUp> {
                   borderRadius: BorderRadius.circular(5),
                   color: Colors.white,
                 ),
-                child: TextFormField(
-                  obscureText: true,
-                  decoration: const InputDecoration(
-                    border: InputBorder.none,
-                    hintText: 'Password',
-                    suffixIcon: Icon(Icons.visibility_off),
+                child: Obx(() => TextFormField(
+                    controller: controllerr.tcPassword,
+                    textInputAction: TextInputAction.done,
+                    obscureText: controllerr.isVisiblePassword.value,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Password',
+                      suffixIcon: InkWell(
+                          onTap: () {
+                            controllerr.isVisiblePassword.value =
+                            !controllerr.isVisiblePassword.value;
+                          },
+                          child: controllerr.isVisiblePassword.value
+                              ? const Icon(Icons.visibility_off) : const Icon(
+                              Icons.visibility)),
+                    ),
                   ),
                 ),
               ),
@@ -120,11 +150,51 @@ class ScreenSignUp extends GetView<ControllerSignUp> {
                 height: size.height * 0.01,
               ),
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 18),
+                padding: const EdgeInsets.only(top: 18),
                 width: size.width,
-                height: size.height * 0.11,
+                height: 70,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      if (controllerr.validateForm(context)) {
+                        showDialog(
+                          context: context,
+                          barrierColor: Colors.transparent,
+                          builder: (context) {
+                            Future.delayed(const Duration(seconds: 4), () {
+                              Get.back();
+                              showDialog(
+                                context: context,
+                                barrierColor: Colors.transparent,
+                                builder: (context) {
+                                  return DialogSuccessSignup(
+                                    title: 'Congratulations!',
+                                    message:
+                                    'You have successfully create Fisio account.',
+                                    description:
+                                    'This is random text for alertdialog of Successfully create account',
+                                    button: 'Let\'s Start!',
+                                    buttonClick: () {
+                                      Get.back();
+                                      Get.offAllNamed(ScreenDashboard.pageId);
+                                      //Get.offAndToNamed(ScreenDashboard.pageId);
+                                    },
+                                  );
+                                },
+                              );
+                            });
+                            return DialogConfirmEmail(
+                              title: 'Confirmation by Email',
+                              message:
+                              'This is random text for alertdialog of confirm email or re-send email',
+                              buttonClick: () {
+                                AppHelper.showLog(
+                                    'Dialog Re-send email clicked');
+                              },
+                            );
+                          },
+                        );
+                      }
+                    },
                     child: const Text(
                       'Sign Up',
                       style: TextStyle(
@@ -133,16 +203,8 @@ class ScreenSignUp extends GetView<ControllerSignUp> {
                           fontWeight: FontWeight.bold),
                     )),
               ),
-              //SizedBox(height: size.height * 0.009,),
-              const Text(
-                'Forgot Password',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white70,
-                ),
-              ),
               SizedBox(
-                height: size.height * 0.04,
+                height: size.height * 0.07,
               ),
               const Text('Or Sign In with ',
                   style: TextStyle(
@@ -152,41 +214,29 @@ class ScreenSignUp extends GetView<ControllerSignUp> {
               SizedBox(
                 height: size.height * 0.01,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 50,
-                    width: 50,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50)),
-                    child: Image.asset('assets/images/ic_google.png',
-                        fit: BoxFit.cover),
-                  ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Container(
-                    height: 50,
-                    width: 50,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50)),
-                    child: Image.asset('assets/images/ic_apple.png',
-                        fit: BoxFit.cover),
-                  ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Container(
-                    height: 50,
-                    width: 50,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50)),
-                    child: Image.asset('assets/images/ic_facebook.png',
-                        fit: BoxFit.cover),
-                  ),
-                ],
-              )
+              RowSocialSignIn(
+                btnGoogleSignIn: () {
+                  Get.showSnackbar(const GetSnackBar(
+                    title: 'Google Login',
+                    message: 's',
+                    duration: Duration(seconds: 2),
+                  ));
+                },
+                btnAppleSignIn: () {
+                  Get.showSnackbar(const GetSnackBar(
+                    title: 'Apple Login',
+                    message: 's',
+                    duration: Duration(seconds: 2),
+                  ));
+                },
+                btnFBSignIn: () {
+                  Get.showSnackbar(const GetSnackBar(
+                    title: 'Facebook Login',
+                    message: 's',
+                    duration: Duration(seconds: 2),
+                  ));
+                },
+              ),
             ],
           ),
         ),

@@ -11,7 +11,7 @@ class ControllerSplash extends GetxController{
 
   navigateScreen(){
     Future.delayed(const Duration(seconds: 4),() {
-      Get.offAndToNamed(ScreenOnBoarding.pageId);
+      Get.offAndToNamed(ScreenWelcome.pageId);
     },);
   }
 

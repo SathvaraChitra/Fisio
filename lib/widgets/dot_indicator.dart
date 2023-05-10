@@ -15,7 +15,7 @@ class DotIndicator extends StatelessWidget {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 300),
         height: 8,
-        width: isActive ? 20:  8,
+        width: isActive ? 30:  8,
         decoration: BoxDecoration(
           color: isActive ? Colors.orange : Colors.white,
           borderRadius: const BorderRadius.all(Radius.circular(12)),

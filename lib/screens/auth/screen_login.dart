@@ -1,5 +1,7 @@
 import 'package:fb_signin_demo_getx/get/controllers.dart';
 import 'package:fb_signin_demo_getx/get/screens.dart';
+import 'package:fb_signin_demo_getx/resource/app_helper.dart';
+import 'package:fb_signin_demo_getx/widgets/row_social_signin.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,7 +13,9 @@ class ScreenLogin extends GetView<ControllerLogin> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    var size = MediaQuery
+        .of(context)
+        .size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -27,15 +31,25 @@ class ScreenLogin extends GetView<ControllerLogin> {
               SizedBox(
                 height: size.height * 0.05,
               ),
-              Align(
-                alignment: Alignment.topRight,
-                child: InkWell(
-                  onTap: (){
-                    Get.toNamed(ScreenSignUp.pageId);
-                  },
-                  child: const Text('Sign up',
-                    style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black54),),
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                      onTap: () {
+                        Get.toNamed(ScreenSignUp.pageId);
+                      },
+                      child: const Icon(
+                        Icons.arrow_back_ios_new, color: Colors.black54,
+                        size: 18,)),
+                  InkWell(
+                    onTap: () {
+                      Get.toNamed(ScreenSignUp.pageId);
+                    },
+                    child: const Text('Sign up',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.black54),),
+                  ),
+                ],
               ),
               SizedBox(
                   width: size.width * 0.3,
@@ -69,7 +83,9 @@ class ScreenLogin extends GetView<ControllerLogin> {
                   color: Colors.white,
                 ),
                 child: TextFormField(
+                  controller: controllerr.tcEmail,
                   keyboardType: TextInputType.emailAddress,
+                  textInputAction: TextInputAction.next,
                   decoration: const InputDecoration(hintText: 'Email',
                     border: InputBorder.none,),
                 ),
@@ -84,10 +100,21 @@ class ScreenLogin extends GetView<ControllerLogin> {
                   borderRadius: BorderRadius.circular(5),
                   color: Colors.white,
                 ),
-                child: TextFormField(
-                  obscureText: true,
-                  decoration: const InputDecoration(border: InputBorder.none,
-                    hintText:'Password',suffixIcon: Icon(Icons.visibility_off),
+                child: Obx(() => TextFormField(
+                    controller: controllerr.tcPassword,
+                    obscureText: controllerr.isVisiblePassword.value,
+                    textInputAction: TextInputAction.done,
+                    decoration: InputDecoration(border: InputBorder.none,
+                      hintText: 'Password',
+                      suffixIcon: InkWell(
+                          onTap: () {
+                            controllerr.isVisiblePassword.value =
+                            !controllerr.isVisiblePassword.value;
+                          },
+                          child: controllerr.isVisiblePassword.value ?
+                          const Icon(Icons.visibility_off) : const Icon(
+                              Icons.visibility)),
+                    ),
                   ),
                 ),
               ),
@@ -99,7 +126,13 @@ class ScreenLogin extends GetView<ControllerLogin> {
                 width: size.width,
                 height: size.height * 0.125,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      if (controllerr.validateForm(context)) {
+                        AppHelper.showSnackBar(title: 'Login');
+                        controllerr.tcEmail.clear();
+                        controllerr.tcPassword.clear();
+                      }
+                    },
                     child: const Text(
                       'Sign In',
                       style: TextStyle(
@@ -110,43 +143,24 @@ class ScreenLogin extends GetView<ControllerLogin> {
               ),
               SizedBox(height: size.height * 0.01,),
               const Text('Forgot Password',
-                style: TextStyle(fontSize: 16,color: Colors.white70,) ,),
+                style: TextStyle(fontSize: 16, color: Colors.white70,),),
               SizedBox(height: size.height * 0.07,),
               const Text('Or Sign In with ',
-                  style: TextStyle(fontSize: 16,color: Colors.white70,)
+                  style: TextStyle(fontSize: 16, color: Colors.white70,)
               ),
               SizedBox(height: size.height * 0.03,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 50,width: 50,
-                    decoration: BoxDecoration(
-                      //color: Colors.indigo,
-                        borderRadius: BorderRadius.circular(50)
-                    ),
-                    child: Image.asset('assets/images/ic_google.png',fit: BoxFit.cover),
-                  ),
-                  const SizedBox(width: 10,),
-                  Container(
-                    height: 50,width: 50,
-                    decoration: BoxDecoration(
-                      // color: Colors.indigo,
-                      borderRadius: BorderRadius.circular(50),
-                    ),
-                    child: Image.asset('assets/images/ic_apple.png',fit: BoxFit.cover,),
-                  ),
-                  const SizedBox(width: 10,),
-                  Container(
-                    height: 50,width: 50,
-                    decoration: BoxDecoration(
-                        color: Colors.indigo,
-                        borderRadius: BorderRadius.circular(50)
-                    ),
-                    child: Image.asset('assets/images/ic_facebook.png',fit: BoxFit.cover),
-                  )
-                ],
-              )
+              RowSocialSignIn(
+                btnGoogleSignIn: () {
+                  AppHelper.showSnackBar(title: 'Google', message: 'sign in',);
+                  //Get.snackbar('Google', 'sign in');
+                },
+                btnAppleSignIn: () {
+                  AppHelper.showSnackBar(title: 'Apple', message: 'Sign In');
+                },
+                btnFBSignIn: () {
+                  AppHelper.showSnackBar(title: 'Facebook', message: 'Sign In');
+                },
+              ),
             ],
           ),
         ),
