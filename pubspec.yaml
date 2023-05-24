@@ -39,6 +39,9 @@ dependencies:
   get: ^4.6.5
   http: ^0.13.5
   flutter_facebook_auth: ^5.0.10
+  percent_indicator: ^4.2.3
+  sliver_tools: ^0.2.10
+  flutter_sticky_header: ^0.6.5
 
 dev_dependencies:
   flutter_test:

@@ -22,18 +22,18 @@ class ScreenOnBoarding extends GetView<ControllerOnBoarding> {
         controllerr.pageIndex.value = value;
         AppHelper.showLog('page ${controllerr.pageIndex.value}');
       },
-      itemCount: AppLists.dummy_data.length,
+      itemCount: AppLists.dummy_data_onboard.length,
       itemBuilder: (BuildContext context, int index) =>
           Obx(() {
             return OnBoardContent(
               size: size,
-              image: AppLists.dummy_data[index].image,
-              title: AppLists.dummy_data[index].title,
-              description: AppLists.dummy_data[index].description,
-              background: AppLists.dummy_data[index].background,
+              image: AppLists.dummy_data_onboard[index].image,
+              title: AppLists.dummy_data_onboard[index].title,
+              description: AppLists.dummy_data_onboard[index].description,
+              background: AppLists.dummy_data_onboard[index].background,
               controller: controllerr,
               isActive: (index == controllerr.pageIndex.value),
-              isLast : (index == AppLists.dummy_data.length - 1),
+              isLast : (index == AppLists.dummy_data_onboard.length - 1),
             );
           }),
     );

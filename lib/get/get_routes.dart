@@ -25,6 +25,10 @@ class AppPages {
         page: () => ScreenSignUp(),
         binding: BindingSignUp()),
     GetPage(
+        name: ScreenIntroduction.pageId,
+        page: () => ScreenIntroduction(),
+        binding: BindingIntroduction()),
+    GetPage(
         name: ScreenDashboard.pageId,
         page: () => ScreenDashboard(),
         binding: BindingDashboard()),

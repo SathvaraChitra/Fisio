@@ -12,51 +12,63 @@ class RowSocialSignIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        InkWell(
-          onTap: btnGoogleSignIn,
-          child: Container(
-            height: 50,
-            width: 50,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
-            child:
-                Image.asset('assets/images/ic_google.png', fit: BoxFit.cover),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 16),
+      child: Column(
+        children: [
+          const Text('Or Sign In with ',
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.white70,
+              )),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              InkWell(
+                onTap: btnGoogleSignIn,
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
+                  child:
+                      Image.asset('assets/images/ic_google.png', fit: BoxFit.cover),
+                ),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              InkWell(
+                onTap: btnAppleSignIn,
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: Image.asset(
+                    'assets/images/ic_apple.png',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              InkWell(
+                onTap: btnFBSignIn,
+                child: Container(
+                  padding: const EdgeInsets.all(5.0),
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
+                  child:
+                      Image.asset('assets/images/ic_facebook.png', fit: BoxFit.cover),
+                ),
+              )
+            ],
           ),
-        ),
-        const SizedBox(
-          width: 10,
-        ),
-        InkWell(
-          onTap: btnAppleSignIn,
-          child: Container(
-            height: 50,
-            width: 50,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-            ),
-            child: Image.asset(
-              'assets/images/ic_apple.png',
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-        const SizedBox(
-          width: 10,
-        ),
-        InkWell(
-          onTap: btnFBSignIn,
-          child: Container(
-            padding: const EdgeInsets.all(5.0),
-            height: 50,
-            width: 50,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
-            child:
-                Image.asset('assets/images/ic_facebook.png', fit: BoxFit.cover),
-          ),
-        )
-      ],
+        ],
+      ),
     );
   }
 }

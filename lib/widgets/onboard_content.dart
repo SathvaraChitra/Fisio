@@ -1,6 +1,7 @@
 import 'package:fb_signin_demo_getx/get/controllers.dart';
 import 'package:fb_signin_demo_getx/get/screens.dart';
 import 'package:fb_signin_demo_getx/resource/app_lists.dart';
+import 'package:fb_signin_demo_getx/resource/app_styles.dart';
 import 'package:fb_signin_demo_getx/widgets/dot_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -41,7 +42,7 @@ class OnBoardContent extends StatelessWidget {
               SizedBox(
                 height: size.height * 0.05,
               ),
-              Container(
+              SizedBox(
                   width: size.width * 0.3,
                   height: size.height * 0.2,
                   child: Image.asset(
@@ -53,8 +54,7 @@ class OnBoardContent extends StatelessWidget {
               Text(
                 title,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                    fontSize: 20, fontWeight: FontWeight.bold,color: Colors.white),
+                style: headerTextStyle(),
               ),
               const SizedBox(
                 height: 10,
@@ -65,35 +65,32 @@ class OnBoardContent extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center),
               SizedBox(height: size.height * 0.03,),
-              ElevatedButton(
-                onPressed: () {
-                  isLast ? Get.offAndToNamed(ScreenLogin.pageId) :controller.pageController.nextPage(
-                      duration: const Duration(milliseconds: 300),
-                      curve: Curves.ease);
-                },
-                style: ButtonStyle(backgroundColor: const MaterialStatePropertyAll(Color(0xFFFFFFFF)),
-                    fixedSize: MaterialStatePropertyAll(
-                        Size(size.width * 0.5, size.height * 0.06)),
-                    shape: MaterialStatePropertyAll(
-                      RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                    )),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Text(
-                      'Start',
-                      style: TextStyle(fontSize: 20,color: Colors.orange),
-                    ),
-                    Icon(Icons.navigate_next,color: Colors.orange),
-                  ],
+              SizedBox(
+                width: size.width * 0.5,
+                child: ElevatedButton(
+                  onPressed: () {
+                    isLast ? Get.offAndToNamed(ScreenLogin.pageId) :controller.pageController.nextPage(
+                        duration: const Duration(milliseconds: 300),
+                        curve: Curves.ease);
+                  },
+                  style: AppStyles.buildOnboardButtonStyle(),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        'Next',
+                        style: TextStyle(fontSize: 20,color: Colors.orange),
+                      ),
+                      Icon(Icons.navigate_next,color: Colors.orange),
+                    ],
+                  ),
                 ),
               ),
               SizedBox(height: size.height * 0.03,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ...List.generate(AppLists.dummy_data.length, (index) =>
+                  ...List.generate(AppLists.dummy_data_onboard.length, (index) =>
                       DotIndicator(isActive: index == controller.pageIndex.value)),
                 ],
               )
@@ -103,4 +100,11 @@ class OnBoardContent extends StatelessWidget {
       ),
     );
   }
+
+  TextStyle headerTextStyle() {
+    return const TextStyle(
+                  fontSize: 20, fontWeight: FontWeight.bold,color: Colors.white);
+  }
+
+
 }
