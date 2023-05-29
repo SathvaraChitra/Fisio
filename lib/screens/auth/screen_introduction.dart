@@ -25,7 +25,7 @@ class ScreenIntroduction extends GetView<ControllerIntroduction> {
         controllerr.pageViewController.nextPage(duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
       },),
       IntroPageTwo(size: size, onBtnClick: () {
-        Get.offAllNamed(ScreenDashboard.pageId);
+        Get.offAllNamed(ScreenAboutUsTraining.pageId);
       },),
     ],);
   }

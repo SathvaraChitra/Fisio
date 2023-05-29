@@ -5,3 +5,4 @@ export 'package:fb_signin_demo_getx/get/controller/controller_signup.dart';
 export 'package:fb_signin_demo_getx/get/controller/controller_introduction.dart';
 export 'package:fb_signin_demo_getx/get/controller/controller_dashboard.dart';
 export 'package:fb_signin_demo_getx/get/controller/controller_onboarding.dart';
+export 'package:fb_signin_demo_getx/get/controller/controller_abou_us_training.dart';

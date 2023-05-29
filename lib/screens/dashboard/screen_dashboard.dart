@@ -96,8 +96,8 @@ class ScreenDashboard extends GetView<ControllerDashboard> {
                               Icons.arrow_back_ios_new,
                               size: 18,
                               color: Colors.black54) : Container(),
-                          Row(
-                            children: const [
+                          const Row(
+                            children: [
                               Icon(
                                 Icons.search,
                                 color: Colors.black54,

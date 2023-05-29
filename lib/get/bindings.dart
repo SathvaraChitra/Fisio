@@ -5,3 +5,4 @@ export 'package:fb_signin_demo_getx/get/binding/binding_signup.dart';
 export 'package:fb_signin_demo_getx/get/binding/binding_introduction.dart';
 export 'package:fb_signin_demo_getx/get/binding/binding_dashboard.dart';
 export 'package:fb_signin_demo_getx/get/binding/binding_onboarding.dart';
+export 'package:fb_signin_demo_getx/get/binding/binding_about_us_training.dart';

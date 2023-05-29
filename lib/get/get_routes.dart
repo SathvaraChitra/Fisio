@@ -32,5 +32,9 @@ class AppPages {
         name: ScreenDashboard.pageId,
         page: () => ScreenDashboard(),
         binding: BindingDashboard()),
+    GetPage(
+        name: ScreenAboutUsTraining.pageId,
+        page: () => ScreenAboutUsTraining(),
+        binding: BindingAboutUsTraing()),
   ];
 }
